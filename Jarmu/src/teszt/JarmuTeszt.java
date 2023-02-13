@@ -15,6 +15,8 @@ public class JarmuTeszt {
         haladAutoBeinditasNLKTezst();
         haladAutoBeinditassalTeszt();
         haladJarmuBeinditassalTeszt();
+        AutoTank();
+        JarmuLeall();
     }
 
     private void muntaSablonTeszt() {
@@ -50,5 +52,23 @@ public class JarmuTeszt {
      boolean vart = true;
      
      assert kapott == vart : "Nem halad";
+    }
+
+    private void AutoTank() {
+        Auto auto = new Auto();
+        auto.tankol();
+        boolean kapott = auto.tankol();
+        boolean vart = false;
+        
+        assert kapott == vart : "Nem tankol ";
+    }
+
+    private void JarmuLeall() {
+        Hajo hajo = new Hajo();
+        hajo.leAllit();
+        boolean kapott =hajo.leAllit();
+        boolean vart = false;
+        
+        assert kapott == vart : "Nem áll le";
     }
 }
