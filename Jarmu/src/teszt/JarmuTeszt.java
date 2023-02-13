@@ -1,5 +1,10 @@
 package teszt;
 import jarmu.Auto;
+import jarmu.Jarmu;
+
+class Hajo extends Jarmu{
+    
+}
 public class JarmuTeszt {
     public static void main(String[] args) {
         new JarmuTeszt();
@@ -9,6 +14,7 @@ public class JarmuTeszt {
         muntaSablonTeszt();
         haladAutoBeinditasNLKTezst();
         haladAutoBeinditassalTeszt();
+        haladJarmuBeinditassalTeszt();
     }
 
     private void muntaSablonTeszt() {
@@ -34,5 +40,15 @@ public class JarmuTeszt {
         boolean vart = false;
         
         assert kapott == vart : "nem halad";
+    }
+
+    private void haladJarmuBeinditassalTeszt() {
+       Hajo hajo = new Hajo();
+       hajo.beIndit();
+       
+     boolean kapott = hajo.halad();
+     boolean vart = true;
+     
+     assert kapott == vart : "Nem halad";
     }
 }
