@@ -4,13 +4,16 @@ public class Auto extends Jarmu {
     
     public Auto() {
     
+        super();
+        defekt = false;
     }
-    
-    public void kereketCserel() {
-    
+    public boolean kereketCserel() {
+        defekt = false;
+        return defekt;
     }
     
     public boolean halad() {
-        return true;
+        boolean halad = false;
+        return halad;
     }
 }

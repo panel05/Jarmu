@@ -9,20 +9,23 @@ package jarmu;
     
     }
     
-    public void beindit() {
-    
+    public void beIndit() {
+        beinditva = true;
     }
     
-    public void leallit() {
-    
+    public void leAllit() {
+        beinditva = false;
     }
     
     public boolean tankol() {
-        return true;
+        if(beinditva) leAllit();
+        if(uzemanyag != true) uzemanyag = true;
+        return uzemanyag;
     }
     
     public boolean halad() {
-        return true;
+        if(!beinditva) beIndit();
+        return beinditva;
     }
 }
 
